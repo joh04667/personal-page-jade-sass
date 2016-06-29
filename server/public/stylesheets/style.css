@@ -4,7 +4,18 @@ html, body {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
-  background-color: #0F0F0F; }
+  background-color: #0F0F0F;
+  font-size: 62.5%; }
+
+p, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  color: #F0F0F0;
+  font-size: 7em;
+  font-weight: bold;
+  line-height: 0.8em; }
 
 .menu {
   width: 600px; }
@@ -17,12 +28,27 @@ html, body {
   position: fixed;
   top: 0;
   left: 0;
-  z-index: -100; }
+  z-index: -100;
+  min-height: 600px;
+  display: table; }
+  .banner h1 {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    animation: fadeInUp .6s .5s ease both; }
 
 .container {
   margin: 100vh 0 0 0;
-  height: 500px;
+  height: 2500px;
   background-color: #F0F0F0;
   padding: 0; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
 
 /*# sourceMappingURL=style.css.map */

@@ -5,6 +5,8 @@ html(ng-app='MyApp')
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     script(src='/vendor/angular/angular.min.js')
+    script(src='/vendor/angular/angular-animate.min.js')
+    script(src='/vendor/jquery.min.js')
     script(src='/assets/scripts/client.min.js')
     body
       div.menu
@@ -20,8 +22,12 @@ html(ng-app='MyApp')
       div.banner
         h1 Full-stack developer.
           br
-          span Hello. I make the Internet.
+          span Hi! I help make the Internet.
       div.container
+        div.scroll-notify(ng-controller="scroll")
+          div(ng-show="scrollTick")
+            h5 Don't be shy. Scroll Down!
+            i.fa.fa-chevron-down
         h2 Stuff!
       div#contact
         h2 doodoo

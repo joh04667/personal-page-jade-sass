@@ -1,7 +1,19 @@
 $font-stack: 'Raleway', sans-serif;
 
 $white: #F0F0F0;
-$black: #0F0F0F;
+$black: #363636;
+$github: #C97EEF;
+$stackoverflow: #F47F23;
+$linkedin: #006699;
+
+$border: 0 4px 4px;
+$hover-shadow: 1px 0 20px;
+
+$phone-min: 320px;
+$phone-max: 480px;
+$tablet-min: 768px;
+$tablet-max: 979px;
+$desktop-min: 980px;
 
 html, body {
   height: 100%;
@@ -13,6 +25,8 @@ html, body {
   font-size: 62.5%;
 }
 
+
+
 p, li, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -20,23 +34,78 @@ p, li, h1, h2, h3, h4, h5, h6 {
 
 h1 {
   color: $white;
-  font-size: 7em;
   font-weight: bold;
+  font-size: 10em;
   line-height: 0.8em;
 }
 
-.menu {
-  width: 600px;
+h2 {
+  font-size: 5em;
+  font-weight: bold;
 }
 
-.banner {
-  background: url('../images/blue-blur.jpg');
-  color: red;
-  height: 100vh;
+.menu {
   width: 100%;
+  height: 50px;
   position: fixed;
   top: 0;
   left: 0;
+  text-align: center;
+  .fa {
+    padding: 5px 10px 10px;
+    transition: text-shadow 0.35s ease-out;
+    text-decoration: none;
+    -webkit-stroke-width: 5.3px;
+    }
+    .tray {
+      display: inline-block;
+      position: relative;
+      padding: 0 3em;
+      margin: 0 2em;
+      background-color: transparent;
+      border-radius: 25px;
+      color: $white;
+      a {
+        text-decoration: none;
+        color:inherit;
+      }
+      &:before {
+        content : '';
+        position : absolute;
+        top : 0;
+        right : 0;
+        bottom : 0;
+        left : 0;
+        z-index: -1;
+        background: $black;
+        transform: perspective(4px) rotateX(-1deg);
+        border-radius: 0 0 15px 15px;
+        border: 1px double $white;
+        border-top: none;
+        }
+    }
+}
+
+.fa-github:hover {
+  text-shadow: $hover-shadow $github;
+}
+.fa-stack-overflow:hover {
+  text-shadow: $hover-shadow $stackoverflow;
+}
+.fa-linkedin-square:hover {
+  text-shadow: $hover-shadow $linkedin;
+}
+.fa-envelope:hover {
+  text-shadow: $hover-shadow cyan;
+}
+
+.banner {
+  background: url('../images/blue-blur.jpg') no-repeat fixed center;
+  height: 100vh;
+  width:100%;
+  position: fixed;
+  top: 0;
+  right: 0;
   z-index: -100;
   min-height: 600px;
   display: table;
@@ -45,17 +114,27 @@ h1 {
       vertical-align: middle;
       text-align: center;
       animation: fadeInUp .6s .5s ease both;
+      text-shadow: $border $black;
+        span {
+          color: $black;
+          font-size: 0.5em;
+          text-shadow: none;
+        }
     }
 }
 
 .container {
   margin: 100vh 0 0 0;
-  height: 2500px;
+  height: 1500px;
   background-color: $white;
   padding: 0;
+  box-shadow: rgba(35,35,50,0.8) 0px 0px 11px -2px;
 }
 
-
+#contact {
+  height: 500px;
+  background-color: $black;
+}
 
 
 @keyframes fadeInUp {

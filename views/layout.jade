@@ -3,12 +3,25 @@ html(ng-app='MyApp')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
     script(src='/vendor/angular/angular.min.js')
     script(src='/assets/scripts/client.min.js')
     body
       div.menu
+        div.tray
+          a(href="https://www.linkedin.com/in/kylebjohnsonmn", target="_blank")
+            i.fa.fa-linkedin-square.fa-4x
+          a(href="http://www.github.com/joh04667", target="_blank")
+            i.fa.fa-github.fa-4x
+          a(href="http://stackoverflow.com/users/5683579/joh04667" target="_blank")    
+            i.fa.fa-stack-overflow.fa-4x
+          a(href="mailto:joh04667@gmail.com", target="_blank")
+            i.fa.fa-envelope.fa-4x
       div.banner
         h1 Full-stack developer.
+          br
+          span Hello. I make the Internet.
       div.container
         h2 Stuff!
-        
+      div#contact
+        h2 doodoo

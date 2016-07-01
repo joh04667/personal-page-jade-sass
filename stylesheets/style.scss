@@ -1,10 +1,11 @@
 $font-stack: 'Raleway', sans-serif;
 
-$white: #F0F0F0;
+$white: #E0E0E0;
 $black: #363636;
 $github: #C97EEF;
 $stackoverflow: #F47F23;
 $linkedin: #006699;
+$grey: #999;
 
 $border: 0 4px 4px;
 $hover-shadow: 1px 0 20px;
@@ -25,8 +26,6 @@ html, body {
   font-size: 62.5%;
 }
 
-
-
 p, li, h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
@@ -40,7 +39,7 @@ h1 {
 }
 
 h2 {
-  font-size: 5em;
+  font-size: 6em;
   font-weight: bold;
 }
 
@@ -56,6 +55,7 @@ h5 {
   top: 0;
   left: 0;
   text-align: center;
+  z-index: 100;
   .fa {
     padding: 5px 10px 10px;
     transition: text-shadow 0.35s ease-out;
@@ -129,7 +129,7 @@ h5 {
 }
 
 .scroll-notify {
-  position: absolute;
+  position: relative;
   display: block;
   top: -100px;
   left: 0;
@@ -151,15 +151,32 @@ h5 {
   }
 }
 
-
-
 .container {
   margin: 100vh 0 0 0;
+  padding: 0 25px;
   height: 1500px;
   background-color: $white;
   padding: 0;
-  box-shadow: rgba(35,35,50,0.8) 0px 0px 11px -2px;
-  position: relative;
+  box-shadow: rgba(35,35,50,0.8) 0px 0px 20px -2px;
+  // position: relative;
+}
+
+.showcase-title {
+  color: $grey;
+  text-align: center;
+  margin: 0 auto 60px auto;
+}
+
+.showcase {
+  width: 100%;
+  margin: 0 70px;
+}
+
+.masonry-brick {
+  background-color: $grey;
+  max-width: 100px;
+  overflow: scroll;
+  margin: 5px;
 }
 
 #contact {

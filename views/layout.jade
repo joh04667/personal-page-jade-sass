@@ -4,9 +4,19 @@ html(ng-app='MyApp')
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    script(src='/vendor/jquery.min.js')
+    script(src='/vendor/masonry/jquery-bridget.js')
+    script(src='/vendor/masonry/ev-emitter.js')
+    script(src='/vendor/masonry/matches-selector.js')
+    script(src='/vendor/masonry/utils.js')
+    script(src='/vendor/masonry/get-size.js')
+    script(src='/vendor/masonry/item.js')
+    script(src='/vendor/masonry/outlayer.js')
+    script(src='/vendor/masonry/masonry.js')
+    script(src='/vendor/masonry/imagesloaded.js')
     script(src='/vendor/angular/angular.min.js')
     script(src='/vendor/angular/angular-animate.min.js')
-    script(src='/vendor/jquery.min.js')
+    script(src="/vendor/masonry/angular-masonry.min.js")
     script(src='/assets/scripts/client.min.js')
     body
       div.menu
@@ -28,6 +38,13 @@ html(ng-app='MyApp')
           div(ng-show="scrollTick")
             h5 Don't be shy. Scroll Down!
             i.fa.fa-chevron-down
-        h2 Stuff!
+        div.showcase-title
+          h2 Check out some of my work:
+        div.showcase
+          masonry
+            div.masonry-brick
+              img(src="images/disko.png")
+            div.masonry-brick
+              img(src='images/blondegalow.png')
       div#contact
         h2 doodoo

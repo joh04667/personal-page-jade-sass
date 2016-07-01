@@ -12,13 +12,13 @@ p, li, h1, h2, h3, h4, h5, h6 {
   padding: 0; }
 
 h1 {
-  color: #F0F0F0;
+  color: #E0E0E0;
   font-weight: bold;
   font-size: 10em;
   line-height: 0.8em; }
 
 h2 {
-  font-size: 5em;
+  font-size: 6em;
   font-weight: bold; }
 
 h5 {
@@ -30,7 +30,8 @@ h5 {
   position: fixed;
   top: 0;
   left: 0;
-  text-align: center; }
+  text-align: center;
+  z-index: 100; }
   .menu .fa {
     padding: 5px 10px 10px;
     transition: text-shadow 0.35s ease-out;
@@ -43,7 +44,7 @@ h5 {
     margin: 0 2em;
     background-color: transparent;
     border-radius: 25px;
-    color: #F0F0F0; }
+    color: #E0E0E0; }
     .menu .tray a {
       text-decoration: none;
       color: inherit; }
@@ -58,7 +59,7 @@ h5 {
       background: #363636;
       transform: perspective(4px) rotateX(-1deg);
       border-radius: 0 0 15px 15px;
-      border: 1px double #F0F0F0;
+      border: 1px double #E0E0E0;
       border-top: none; }
 
 .fa-github:hover {
@@ -95,14 +96,14 @@ h5 {
       text-shadow: none; }
 
 .scroll-notify {
-  position: absolute;
+  position: relative;
   display: block;
   top: -100px;
   left: 0;
   height: 100px;
   width: 100%;
   text-align: center;
-  color: #F0F0F0; }
+  color: #E0E0E0; }
   .scroll-notify h5, .scroll-notify i {
     animation: fadeInUp .6s .5s ease both;
     text-shadow: 0 4px 4px #363636; }
@@ -115,11 +116,26 @@ h5 {
 
 .container {
   margin: 100vh 0 0 0;
+  padding: 0 25px;
   height: 1500px;
-  background-color: #F0F0F0;
+  background-color: #E0E0E0;
   padding: 0;
-  box-shadow: rgba(35, 35, 50, 0.8) 0px 0px 11px -2px;
-  position: relative; }
+  box-shadow: rgba(35, 35, 50, 0.8) 0px 0px 20px -2px; }
+
+.showcase-title {
+  color: #999;
+  text-align: center;
+  margin: 0 auto 60px auto; }
+
+.showcase {
+  width: 100%;
+  margin: 0 70px; }
+
+.masonry-brick {
+  background-color: #999;
+  max-width: 100px;
+  overflow: scroll;
+  margin: 5px; }
 
 #contact {
   height: 500px;

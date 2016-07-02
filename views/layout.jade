@@ -19,6 +19,7 @@ html(ng-app='MyApp')
     script(src="/vendor/masonry/angular-masonry.min.js")
     script(src='/assets/scripts/client.min.js')
     body
+      //- TODO: wassup with the width: only happens with dev tools thoooooo
       div.menu
         div.tray
           a(href="https://www.linkedin.com/in/kylebjohnsonmn", target="_blank")
@@ -42,10 +43,14 @@ html(ng-app='MyApp')
           h2 Check out some of my work:
         div.showcase
           //- TODO: showcase height
-          masonry
-            div.masonry-brick
+          div(masonry)
+            div.masonry-brick(masonry-brick)
               img(src="images/disko.png")
-            div.masonry-brick
+            div.masonry-brick(masonry-brick)
               img(src='images/blindes.png')
+            div.masonry-brick(masonry-brick)
+              img(src='images/banana.png')
       div#contact
-        h2 doodoo
+        2h2 doodoo
+        div.footer
+          h5 Ⓒ 2016 Kyle Johnson

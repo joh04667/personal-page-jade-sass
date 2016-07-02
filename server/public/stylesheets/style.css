@@ -1,6 +1,6 @@
 html, body {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
@@ -128,17 +128,25 @@ h5 {
   margin: 0 auto 60px auto; }
 
 .showcase {
-  width: 100%;
   height: 1700px;
   margin: 0 70px; }
 
 .masonry-brick {
   overflow: scroll;
   margin: 5px; }
+  .masonry-brick img {
+    box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.75); }
 
 #contact {
   height: 500px;
-  background-color: #363636; }
+  background-color: #363636;
+  position: relative; }
+
+.footer {
+  color: #6d6d6d;
+  position: relative;
+  bottom: 0;
+  text-align: absolute; }
 
 @keyframes fadeInUp {
   0% {

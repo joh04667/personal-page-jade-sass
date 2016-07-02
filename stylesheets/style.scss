@@ -6,6 +6,7 @@ $github: #C97EEF;
 $stackoverflow: #F47F23;
 $linkedin: #006699;
 $grey: #999;
+$darkgrey: #6d6d6d;
 
 $border: 0 4px 4px;
 $hover-shadow: 1px 0 20px;
@@ -18,7 +19,7 @@ $desktop-min: 980px;
 
 html, body {
   height: 100%;
-  width: 100%;
+  width: 100vw;
   padding: 0;
   margin: 0;
   font-family: $font-stack;
@@ -168,7 +169,7 @@ h5 {
 
 .showcase {
   // TODO: hate this div
-  width: 100%;
+  // width: 100%;
   height: 1700px;
   margin: 0 70px;
 }
@@ -176,12 +177,28 @@ h5 {
 .masonry-brick {
   overflow: scroll;
   margin: 5px;
+  img {
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.75);
+  }
 }
 
 #contact {
   height: 500px;
   background-color: $black;
+  position: relative;
 }
+
+.footer {
+  color: $darkgrey;
+  position: relative;
+  bottom: 0;
+  text-align: absolute;
+}
+
+
+
+
+
 
 
 @keyframes fadeInUp {

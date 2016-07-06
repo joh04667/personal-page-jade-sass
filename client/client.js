@@ -1,4 +1,4 @@
-var app = angular.module('MyApp', ['ngAnimate', 'wu.masonry']);
+var app = angular.module('MyApp', ['ngAnimate', 'wu.masonry', "ngSticky"]);
 
 
 app.service('ListenerService', ['$window', '$rootScope', function($window, $rootScope) {

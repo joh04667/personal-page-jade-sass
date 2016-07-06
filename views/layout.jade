@@ -1,6 +1,7 @@
 doctype html
 html(ng-app='MyApp')
   head
+    //- //http://www.madebydaryl.co.uk/
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
@@ -17,6 +18,7 @@ html(ng-app='MyApp')
     script(src='/vendor/angular/angular.min.js')
     script(src='/vendor/angular/angular-animate.min.js')
     script(src="/vendor/masonry/angular-masonry.min.js")
+    script(src='/vendor/angular/sticky.min.js')
     script(src='/assets/scripts/client.min.js')
     body
       //- TODO: wassup with the width: only happens with dev tools thoooooo
@@ -44,11 +46,11 @@ html(ng-app='MyApp')
         div.showcase
           //- TODO: showcase height
           div(masonry)
-            div.masonry-brick(masonry-brick)
+            div.masonry-brick
               img(src="images/disko.png")
-            div.masonry-brick(masonry-brick)
+            div.masonry-brick
               img(src='images/blindes.png')
-            div.masonry-brick(masonry-brick)
+            div.masonry-brick
               img(src='images/banana.png')
       div#contact
         2h2 doodoo

@@ -14,6 +14,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "jquery": "^3.0.0",
+    "ngsticky": "^1.7.12",
     "node-sass": "^3.8.0",
     "nodemon": "^1.9.1",
     "passport": "^0.3.2",

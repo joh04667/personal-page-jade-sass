@@ -1,4 +1,4 @@
-var app = angular.module('MyApp', ['ngAnimate', 'wu.masonry', "ngSticky"]);
+var app = angular.module('MyApp', ['ngAnimate', 'wu.masonry', 'vModal']);
 
 
 app.service('ListenerService', ['$window', '$rootScope', function($window, $rootScope) {
@@ -14,6 +14,14 @@ app.service('ListenerService', ['$window', '$rootScope', function($window, $root
     };
 
 }]);
+
+app.factory('myModal', function (vModal) {
+  return vModal({
+    controller: 'MyModalController',
+    controllerAs: 'myModalCtrl',
+    templateUrl: 'my-modal.html'
+  });
+});
 
 
 app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout', function(ListenerService, $scope, $rootScope, $timeout) {

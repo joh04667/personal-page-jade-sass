@@ -1,10 +1,10 @@
 doctype html
 html(ng-app='MyApp')
   head
-    //- //http://www.madebydaryl.co.uk/
     title= title
     link(rel='stylesheet', href='/stylesheets/style.css')
     link(rel='stylesheet', href='/stylesheets/font-awesome.min.css')
+    link(rel="stylesheet", href="/stylesheets/v-modal.min.css")
     script(src='/vendor/jquery.min.js')
     script(src='/vendor/masonry/jquery-bridget.js')
     script(src='/vendor/masonry/ev-emitter.js')
@@ -19,6 +19,7 @@ html(ng-app='MyApp')
     script(src='/vendor/angular/angular-animate.min.js')
     script(src="/vendor/masonry/angular-masonry.min.js")
     script(src='/vendor/angular/sticky.min.js')
+    script(src='/vendor/angular/v-modal.js')
     script(src='/assets/scripts/client.min.js')
     body
       //- TODO: wassup with the width: only happens with dev tools thoooooo
@@ -42,9 +43,8 @@ html(ng-app='MyApp')
             h5 Don't be shy. Scroll Down!
             i.fa.fa-chevron-down
         div.showcase-title
-          h2 Check out some of my work:
+          h2 Check out the cool stuff I've worked on:
         div.showcase
-          //- TODO: showcase height
           div(masonry)
             div.masonry-brick
               img(src="images/disko.png")
@@ -53,6 +53,5 @@ html(ng-app='MyApp')
             div.masonry-brick
               img(src='images/banana.png')
       div#contact
-        2h2 doodoo
         div.footer
           h5 Ⓒ 2016 Kyle Johnson

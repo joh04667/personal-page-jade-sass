@@ -22,11 +22,10 @@ app.factory('myModal', function (vModal) {
     templateUrl: 'my-modal.html'
   });
 });
-
+ 
 
 app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout', function(ListenerService, $scope, $rootScope, $timeout) {
   $scope.scrollTick = false;
-
   ListenerService.scrollDown();
 
   $timeout(function() {
@@ -36,5 +35,4 @@ app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout',
   $rootScope.$on('DOM.scroll', function() {
     $('.scroll-notify').css({'opacity':( 100-$(window).scrollTop()/2 )/100});
   });
-
 }]);

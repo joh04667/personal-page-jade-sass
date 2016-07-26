@@ -1,4 +1,4 @@
-var app = angular.module('MyApp', ['ngAnimate', 'wu.masonry', 'vModal']);
+var app = angular.module('MyPortfolio', ['ngAnimate', 'wu.masonry', 'vModal']);
 
 
 app.service('ListenerService', ['$window', '$rootScope', function($window, $rootScope) {
@@ -22,7 +22,7 @@ app.factory('myModal', function (vModal) {
     templateUrl: 'my-modal.html'
   });
 });
- 
+
 
 app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout', function(ListenerService, $scope, $rootScope, $timeout) {
   $scope.scrollTick = false;

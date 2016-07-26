@@ -11,7 +11,7 @@ module.exports = function(grunt) {
     },
     watch: {
       scripts: {
-        files: ['client/client.js', 'stylesheets/*'],
+        files: ['client/client.js', 'client/blog.js', 'stylesheets/*'],
         tasks: ['uglify', 'copy', 'sass'],
         options: {
           spawn: false,
@@ -23,8 +23,12 @@ module.exports = function(grunt) {
         banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
       },
       build: {
-        src: 'client/client.js',
-        dest: 'server/public/assets/scripts/client.min.js'
+        files: [{
+        expand: true,
+        src: '*.js',
+        dest: 'server/public/assets/scripts',
+        cwd: './client'
+       }]
       }
     },
     copy: {

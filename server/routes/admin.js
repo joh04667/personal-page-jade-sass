@@ -18,7 +18,6 @@ router.get('/', function(req, res) {
       console.log(result);
       done();
       res.render('admin.jade', {title: 'Turn around',
-                                test: '<h1>i am a sanitizer test pls ignore</h1>',
                                 posts: result});
     });
   });

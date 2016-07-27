@@ -1,0 +1,46 @@
+html, body {
+  height: 100%;
+  width: 100vw;
+  padding: 0;
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+  background-color: #363636;
+  font-size: 62.5%; }
+
+p, li, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0; }
+
+h1 {
+  color: #E0E0E0;
+  font-weight: bold;
+  font-size: 10em;
+  line-height: 0.8em; }
+
+h2 {
+  font-size: 6em;
+  font-weight: bold; }
+
+h5 {
+  font-size: 2.5em; }
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(25px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }
+@keyframes vertical-bob {
+  0% {
+    transform: translateY(0); }
+  25% {
+    transform: translateY(20px); }
+  50% {
+    transform: translateY(0); }
+  100% {
+    transform: translateY(0); } }
+.post {
+  color: #E0E0E0; }
+
+/*# sourceMappingURL=blog.css.map */

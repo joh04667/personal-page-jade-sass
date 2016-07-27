@@ -2,12 +2,12 @@ doctype html
 html(ng-app='BlogPost')
   head
     title= title
-    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='/stylesheets/blog.css')
     script(src='/vendor/angular/angular.min.js')
     script(src='/assets/scripts/blog.js')
     body
       h1 is my blag
       div.post-container
         div.post
-          h3=header
-          p=postBody
+          h3= header
+          p!= postBody

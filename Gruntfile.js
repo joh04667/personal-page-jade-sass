@@ -7,6 +7,7 @@ module.exports = function(grunt) {
         files: {
           'server/public/stylesheets/style.css': 'stylesheets/style.scss',
           'server/public/stylesheets/admin.css': 'stylesheets/admin.scss',
+          'server/public/stylesheets/blog.css': 'stylesheets/blog.scss',
           'server/public/stylesheets/index.css': 'stylesheets/index.scss'
         }
       }

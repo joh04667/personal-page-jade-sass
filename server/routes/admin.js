@@ -6,8 +6,24 @@ var connectionString = require('../db/connection').connectionString;
 
 
 router.get('/', function(req, res) {
-  res.render('admin.jade', {title: 'Turn around',
-                            test: '<h1>i am a sanitizer test pls ignore</h1>'});
+  var result = [];
+
+  pg.connect(connectionString, function(err, client, done) {
+
+    var query = client.query(`SELECT * FROM posts`);
+
+    query.on('row', row => {result.push(row)});
+    query.on('err', err => {throw(err)});
+    query.on('end', function() {
+      console.log(result);
+      done();
+      res.render('admin.jade', {title: 'Turn around',
+                                test: '<h1>i am a sanitizer test pls ignore</h1>',
+                                posts: result});
+    });
+  });
+
+
 });
 
 

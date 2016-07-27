@@ -21,7 +21,6 @@ app.factory('DataService', ['$http', function($http) {
 
 
 app.controller('PostListController', ['DataService', '$scope', function(DataService, $scope) {
-  $scope.postList = DataService.result;
 
 }]);
 

@@ -11,9 +11,11 @@ html(ng-app='MyAdmin')
     body
       h2 Current Blog Posts:
       div.post-list(ng-controller='PostListController')
-       ul
-         li(ng-repeat='posts in postList.data') 
-           p{{posts.id}} {{posts.title}} {{posts.body}}
+        ol
+        each post in posts
+          li
+            h5= post.title
+            p!= post.body
       div.newPost
         div.post-write(ng-controller="NewPostController")
           form

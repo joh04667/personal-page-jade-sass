@@ -7,6 +7,7 @@ var port = process.env.PORT || 3000;
 ////////////import modules//////////
 var index = require('./routes/index');
 var blog = require('./routes/blog');
+var admin = require('./routes/admin');
 
 
 //////////// config /////////////
@@ -19,6 +20,7 @@ app.use(bodyParser.json());
 ///////////routes/////////////
 app.use('/', index);
 app.use('/blog', blog);
+app.use('/admin', admin);
 
 
 

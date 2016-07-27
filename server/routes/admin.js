@@ -13,6 +13,7 @@ router.get('/', function(req, res) {
 
 router.get('/all', function(req, res) {
   pg.connect(connectionString, function(err, client, done) {
+
     var result = [];
     var query = client.query(`SELECT * FROM posts`);
 
@@ -22,16 +23,25 @@ router.get('/all', function(req, res) {
 
     query.on('end', function() {
       res.send(result);
-      console.log('doop', result);
       done();
     });
-  });
 
+  });
 });
 
 router.post('/new', function(req, res) {
-  console.log(req, req.body);
-  res.send('okay');
+  pg.connect(connectionString, function(err, client, done) {
+
+    var query = client.query(`INSERT INTO posts (date_added, title, body) VALUES ($1, $2, $3)`, [new Date(), req.body.title, req.body.body]);
+
+    query.on('err', err => {throw(err)});
+
+    query.on('end', function() {
+      res.sendStatus(200);
+      done();
+    });
+
+  });
 });
 
 

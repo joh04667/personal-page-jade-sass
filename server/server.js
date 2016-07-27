@@ -1,3 +1,4 @@
+
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -24,15 +25,6 @@ initializeDB();
 app.use('/', index);
 app.use('/blog', blog);
 app.use('/admin', admin);
-
-
-
-
-
-
-
-
-
 
 
 

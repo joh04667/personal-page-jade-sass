@@ -13,8 +13,7 @@ html(ng-app='MyAdmin')
       div.post-list(ng-controller='PostListController')
        ul
          li(ng-repeat='posts in postList.data') 
-           p {{posts.title}}
-           {{posts.body}}
+           p{{posts.id}} {{posts.title}} {{posts.body}}
       div.newPost
         div.post-write(ng-controller="NewPostController")
           form

@@ -43,10 +43,18 @@ h5 {
 h2 {
   color: #E0E0E0; }
 
+pre {
+  background-color: #363636;
+  color: #E0E0E0;
+  margin: 0 15px; }
+
 .post-list {
   margin: auto 30px;
   background-color: #E0E0E0;
   color: #363636; }
+
+form {
+  margin: 50px; }
 
 input {
   display: block;
@@ -56,6 +64,7 @@ input {
 
 trix-editor {
   background-color: #E0E0E0;
-  margin: 20px; }
+  margin: 20px;
+  font-size: 2em; }
 
 /*# sourceMappingURL=admin.css.map */

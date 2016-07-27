@@ -5,10 +5,20 @@ h2 {
   color: $white;
 }
 
+pre {
+  background-color: $black;
+  color: $white;
+  margin: 0 15px;
+}
+
 .post-list {
   margin: auto 30px;
   background-color: $white;
   color: $black;
+}
+
+form {
+  margin: 50px;
 }
 
 input{
@@ -21,4 +31,5 @@ input{
 trix-editor {
   background-color: $white;
   margin: 20px;
+  font-size: 2em;
 }

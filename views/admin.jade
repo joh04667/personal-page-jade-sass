@@ -18,7 +18,8 @@ html(ng-app='MyAdmin')
           form
             input(type='text', ng-model="title")
             trix-editor(angular-trix, ng-model='body')
-          h1 {{body}}
+            input(type='submit', ng-click='submit()')
+          
           h2!= test
 
          

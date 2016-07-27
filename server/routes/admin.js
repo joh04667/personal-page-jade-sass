@@ -8,7 +8,10 @@ router.get('/', function(req, res) {
 });
 
 
-
+router.post('/new', function(req, res) {
+  console.log(req, req.body);
+  res.send('okay');
+});
 
 
 module.exports = router;

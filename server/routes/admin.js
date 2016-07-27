@@ -8,6 +8,11 @@ router.get('/', function(req, res) {
 });
 
 
+router.get('/all', function(req, res) {
+
+  res.send(['this', 'is', 'placeholder', 'information']);
+});
+
 router.post('/new', function(req, res) {
   console.log(req, req.body);
   res.send('okay');

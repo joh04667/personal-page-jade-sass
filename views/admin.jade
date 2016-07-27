@@ -12,7 +12,7 @@ html(ng-app='MyAdmin')
       h2 Current Blog Posts:
       div.post-list(ng-controller='PostListController')
        ul
-         li(ng-repeat='posts in postList') {{posts}}
+         li(ng-repeat='posts in postList.data') {{posts}}
       div.newPost
         div.post-write(ng-controller="NewPostController")
           form

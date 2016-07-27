@@ -1,8 +1,27 @@
 var app = angular.module('MyAdmin', ['angularTrix']);
 
-app.controller('PostListController', ['$scope', function($scope) {
+app.factory('DataService', ['$http', function($http) {
 
-  $scope.postList = ['test', 'tester', 'melon', 'banana'];
+  var result = {};
+  var GetPosts = function() {
+    $http.get('/admin/all').then(function(response) {
+      result.data = response.data;
+      console.log(response);
+    });
+  };
+
+  GetPosts();
+
+  return {
+    result: result,
+    GetPosts: GetPosts
+  };
+
+}]);
+
+
+app.controller('PostListController', ['DataService', '$scope', function(DataService, $scope) {
+  $scope.postList = DataService.result;
 
 }]);
 

@@ -11,3 +11,8 @@ html(ng-app='BlogPost')
         div.post
           h3= header
           p!= postBody
+        div.post-nav
+          ul
+            each num in range
+              a(href="/blog/#{num}")
+                li= num

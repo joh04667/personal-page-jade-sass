@@ -40,7 +40,16 @@ h5 {
     transform: translateY(0); }
   100% {
     transform: translateY(0); } }
+body {
+  background-color: #005163; }
+
 .post {
-  color: #E0E0E0; }
+  background-color: #E0E0E0;
+  font-size: 3em; }
+
+pre {
+  background-color: #363636;
+  color: #E0E0E0;
+  margin: 5px 20px; }
 
 /*# sourceMappingURL=blog.css.map */

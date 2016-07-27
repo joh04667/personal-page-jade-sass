@@ -54,4 +54,8 @@ input {
   width: 75%;
   min-height: 30px; }
 
+trix-editor {
+  background-color: #E0E0E0;
+  margin: 20px; }
+
 /*# sourceMappingURL=admin.css.map */

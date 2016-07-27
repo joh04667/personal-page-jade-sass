@@ -1,6 +1,9 @@
 var express = require('express');
 var bodyParser = require('body-parser');
 
+var connectionString = require('./db/connection').connectionString;
+var initializeDB = require('./db/connection').initializeDB;
+
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -13,7 +16,7 @@ var admin = require('./routes/admin');
 //////////// config /////////////
 app.use(express.static('server/public'));
 app.use(bodyParser.json());
-
+initializeDB();
 
 
 

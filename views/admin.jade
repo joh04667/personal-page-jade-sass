@@ -6,6 +6,15 @@ html(ng-app='MyAdmin')
     script(src='/vendor/angular/angular.min.js')
     script(src='/assets/scripts/admin.js')
     body
-     h2 Current Blog Posts:
-       div.post-list(ng-controller='PostListController')
+      h2 Current Blog Posts:
+      div.post-list(ng-controller='PostListController')
+       ul
+         li(ng-repeat='posts in postList') {{posts}}
+      div.newPost
+        div.post-write(ng-controller="NewPostController")
+          form
+            input(type='text', ng-model="title")
+            input(type='textarea', ng-model='body')
+          h1 {{title}}
+          h1 {{body}}
          

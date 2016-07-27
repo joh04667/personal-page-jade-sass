@@ -6,7 +6,8 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'server/public/stylesheets/style.css': 'stylesheets/style.scss',
-          'server/public/stylesheets/admin.css': 'stylesheets/admin.scss'
+          'server/public/stylesheets/admin.css': 'stylesheets/admin.scss',
+          'server/public/stylesheets/index.css': 'stylesheets/index.scss'
         }
       }
     },

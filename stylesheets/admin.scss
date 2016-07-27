@@ -1,5 +1,13 @@
 @import "style";
 
-body {
-  color: white;
+
+h2 {
+  color: $white;
+}
+
+
+.post-list {
+  margin: auto 30px;
+  background-color: $white;
+  color: $black;
 }

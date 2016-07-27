@@ -3,7 +3,10 @@ html(ng-app='MyAdmin')
   head
     title= title
     link(rel='stylesheet', href='/stylesheets/admin.css')
+    link(rel='stylesheet', href='/vendor/trix/trix.css')
     script(src='/vendor/angular/angular.min.js')
+    script(src='/vendor/trix/trix.js')
+    script(src='/vendor/angular-trix.min.js')
     script(src='/assets/scripts/admin.js')
     body
       h2 Current Blog Posts:
@@ -14,7 +17,7 @@ html(ng-app='MyAdmin')
         div.post-write(ng-controller="NewPostController")
           form
             input(type='text', ng-model="title")
-            input(type='textarea', ng-model='body')
-          h1 {{title}}
+            trix-editor(angular-trix, ng-model='body')
           h1 {{body}}
+
          

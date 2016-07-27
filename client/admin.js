@@ -1,4 +1,4 @@
-var app = angular.module('MyAdmin', []);
+var app = angular.module('MyAdmin', ['angularTrix']);
 
 app.controller('PostListController', ['$scope', '$http', function($scope, $http) {
 
@@ -8,6 +8,5 @@ app.controller('PostListController', ['$scope', '$http', function($scope, $http)
 
 app.controller('NewPostController', ['$scope', '$http', function($scope, $http) {
 
-  
 
 }]);

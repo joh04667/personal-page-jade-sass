@@ -48,4 +48,10 @@ h2 {
   background-color: #E0E0E0;
   color: #363636; }
 
+input {
+  display: block;
+  margin: 30px auto;
+  width: 75%;
+  min-height: 30px; }
+
 /*# sourceMappingURL=admin.css.map */

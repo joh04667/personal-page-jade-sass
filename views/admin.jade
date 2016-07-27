@@ -1,8 +1,11 @@
-!!! 5
-  html(ng-app='MyApp')
-    head
-      title= title
-      link(rel='stylesheet', href='/stylesheets/style.css')
-      script(src='/vendor/angular/angular.min.js')
-      script(src='/assets/scripts/admin.js')
-      body
+doctype html
+html(ng-app='MyAdmin')
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/admin.css')
+    script(src='/vendor/angular/angular.min.js')
+    script(src='/assets/scripts/admin.js')
+    body
+     h2 Current Blog Posts:
+       div.post-list(ng-controller='PostListController')
+         

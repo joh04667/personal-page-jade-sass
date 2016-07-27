@@ -6,12 +6,13 @@ module.exports = function(grunt) {
       dist: {
         files: {
           'server/public/stylesheets/style.css': 'stylesheets/style.scss',
+          'server/public/stylesheets/admin.css': 'stylesheets/admin.scss'
         }
       }
     },
     watch: {
       scripts: {
-        files: ['client/client.js', 'client/blog.js', 'stylesheets/*'],
+        files: ['client/*', 'stylesheets/*'],
         tasks: ['uglify', 'copy', 'sass'],
         options: {
           spawn: false,

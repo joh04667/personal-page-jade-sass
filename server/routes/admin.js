@@ -3,8 +3,7 @@ var path = require('path');
 var jade = require('jade');
 
 router.get('/', function(req, res) {
-  res.render('admin.jade', {});
-
+  res.render('admin.jade', {title: 'Turn around'});
 });
 
 

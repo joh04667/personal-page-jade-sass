@@ -6,7 +6,7 @@ var connectionString = require('../db/connection.js').connectionString;
 
 
 router.get('/', function(request, res) {
-  res.render('blog.jade', {title: 'Kyle Johnson\'s Blog', range: [2,3,4,5]});
+  res.render('blog.jade', {title: `Kyle Johnson's Blog`, range: [2,3,4,5]});
 });
 
 router.get('/:article', function(request, res) {
@@ -30,10 +30,10 @@ router.get('/:article', function(request, res) {
       if(!result) {
         res.sendStatus(404);
       } else {
-      res.render('blog.jade', {title: 'Kyle Johnson\'s Blog #' + request.params.article,
-                               header: result.title,
-                               postBody: result.body,
-                               range: range});
+        res.render('blog.jade', {title: 'Kyle Johnson\'s Blog #' + request.params.article,
+                                 header: result.title,
+                                 postBody: result.body,
+                                 range: range});
       }
     });
     });

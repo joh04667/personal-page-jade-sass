@@ -40,6 +40,12 @@ h1 {
   font-weight: bold;
   font-size: 10em;
   line-height: 0.8em;
+  @media screen and (max-width: $tablet-min) {
+    font-size: 7.75em;
+  }
+  @media screen and (max-width: $phone-max) {
+    font-size: 5em;
+  }
 }
 
 h2 {

@@ -6,7 +6,7 @@ var jade = require('jade');
 
 
 router.get('/', function(request, res) {
-  res.render('layout.jade', {title: 'MyApp', body: 'main.jade'});
+  res.render('layout.jade', {title: 'Kyle Johnson: Full-Stack Developer', body: 'main.jade'});
 });
 
 

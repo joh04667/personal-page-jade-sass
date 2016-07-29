@@ -2,6 +2,7 @@
 
 
 .menu {
+  animation: slideInDown 6s linear;
   width: 100%;
   height: 50px;
   position: fixed;
@@ -43,6 +44,7 @@
         }
     }
 }
+
 
 .fa-github:hover {
   text-shadow: $hover-shadow $github;

@@ -30,7 +30,7 @@ app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout',
 
   $timeout(function() {
     $scope.scrollTick = true;
-  }, 6000);
+  }, 5000);
 
   $rootScope.$on('DOM.scroll', function() {
     $('.scroll-notify').css({'opacity':( 100-$(window).scrollTop()/2 )/100});

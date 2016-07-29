@@ -23,6 +23,19 @@ app.factory('myModal', function (vModal) {
   });
 });
 
+app.controller('TrayController', ['ListenerService', '$scope', '$rootScope', '$timeout', function(ListenerService, $scope, $rootScope, $timeout) {
+  $scope.hide = false;
+  ListenerService.scrollDown();
+
+  $timeout(function() {
+    $scope.hide = 'hide';
+  }, 5000);
+
+  $rootScope.$on('DOM.scroll', function() {
+    $scope.hide = $(window).scrollTop() > 50 ? 'hide' : false;
+  });
+
+}]);
 
 app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout', function(ListenerService, $scope, $rootScope, $timeout) {
   $scope.scrollTick = false;
@@ -31,7 +44,7 @@ app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout',
   $timeout(function() {
     $scope.scrollTick = true;
   }, 5000);
-
+//TODO: doesn't work. Show tray when page scrolled for a bit
   $rootScope.$on('DOM.scroll', function() {
     $('.scroll-notify').css({'opacity':( 100-$(window).scrollTop()/2 )/100});
   });

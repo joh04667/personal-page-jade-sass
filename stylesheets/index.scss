@@ -2,7 +2,8 @@
 
 
 .menu {
-  animation: slideInDown 6s linear;
+  transform: translateY(-41px);
+  transition: transform 1s ease-in;
   width: 100%;
   height: 50px;
   position: fixed;
@@ -17,6 +18,7 @@
     -webkit-stroke-width: 5.3px;
   }
     .tray {
+      transition: transform 1s linear;
       display: inline-block;
       position: relative;
       padding: 0 3em;
@@ -45,6 +47,9 @@
     }
 }
 
+.hide {
+  transform: translateY(0);
+}
 
 .fa-github:hover {
   text-shadow: $hover-shadow $github;

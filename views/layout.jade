@@ -23,7 +23,7 @@ html(ng-app='MyPortfolio')
     script(src='/assets/scripts/client.js')
     body
       //- TODO: wassup with the width: only happens with dev tools thoooooo
-      div.menu
+      div.menu(ng-controller="TrayController", ng-class="hide")
         div.tray
           a(href="https://www.linkedin.com/in/kylebjohnsonmn", target="_blank")
             i.fa.fa-linkedin-square.fa-4x

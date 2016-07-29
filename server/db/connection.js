@@ -29,7 +29,7 @@ function initializeDB() {
 
     query.on('end', function() {
       console.log('post table okay');
-      done();
+      client.end();
     });
 
     query.on('err', function(err){

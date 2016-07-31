@@ -1,2 +1,2 @@
-/*! portfolio 2016-07-29 */
+/*! portfolio 2016-08-01 */
 var app=angular.module("BlogPost",[]);

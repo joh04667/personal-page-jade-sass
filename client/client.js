@@ -34,7 +34,7 @@ app.controller('TrayController', ['ListenerService', '$scope', '$rootScope', '$t
 // if user scrolls a bit show tray.
 // Also, cancel timeout above, digest to start animation, and deregister itself
   var scrollListen = $rootScope.$on('DOM.scroll', function() {
-    if($(window).scrollTop() > 300) {
+    if($(window).scrollTop() > 250) {
       $timeout.cancel();
       $scope.hide = 'hide';
       $scope.$digest();

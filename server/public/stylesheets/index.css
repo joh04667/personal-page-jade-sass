@@ -55,7 +55,7 @@ h5 {
     transform: translateY(0); } }
 .menu {
   transform: translateY(-41px);
-  transition: transform 1s ease-in;
+  transition: transform .75s ease-in;
   width: 100%;
   height: 50px;
   position: fixed;

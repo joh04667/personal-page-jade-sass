@@ -19,6 +19,8 @@ html(ng-app='BlogPost')
           p!= postBody
         div.post-nav
           ul
-            each num in range
+            each num, index in range
               a(href="/blog/#{num}")
                 li= num
+              if index !== range.length - 1
+                span /

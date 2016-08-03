@@ -127,4 +127,14 @@ header {
     header li a {
       line-height: 70px; }
 
+.post-nav {
+  font-size: 5em; }
+  .post-nav li {
+    display: inline-block;
+    color: #E0E0E0; }
+    .post-nav li:hover {
+      text-decoration: underline; }
+  .post-nav span {
+    color: #363636; }
+
 /*# sourceMappingURL=blog.css.map */

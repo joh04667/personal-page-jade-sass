@@ -20,7 +20,7 @@ router.get('/:article', function(request, res) {
 
       var low = request.params.article - 2;
       low = low < 1 ? 1 : low;
-      var high = low + 5;
+      var high = low + 4;
       var query = client.query(`SELECT id FROM posts WHERE id BETWEEN ${low} AND ${high}`);
 
       query.on('row', row => {range.push(row.id)});
@@ -28,6 +28,7 @@ router.get('/:article', function(request, res) {
         client.end();
 
         result = result.length ? result[0] : false;
+        range = range.sort();
         if(!result) {
           res.sendStatus(404);
         } else {

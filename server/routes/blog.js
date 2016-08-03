@@ -25,16 +25,17 @@ router.get('/:article', function(request, res) {
 
       query.on('row', row => {range.push(row.id)});
       query.on('end', function() {
+        client.end();
 
-      result = result.length ? result[0] : false;
-      if(!result) {
-        res.sendStatus(404);
-      } else {
-        res.render('blog.jade', {title: 'Kyle Johnson\'s Blog #' + request.params.article,
-                                 header: result.title,
-                                 postBody: result.body,
-                                 range: range});
-      }
+        result = result.length ? result[0] : false;
+        if(!result) {
+          res.sendStatus(404);
+        } else {
+          res.render('blog.jade', {title: 'Kyle Johnson\'s Blog #' + request.params.article,
+                                  header: result.title,
+                                  postBody: result.body,
+                                  range: range});
+        }
     });
     });
   });

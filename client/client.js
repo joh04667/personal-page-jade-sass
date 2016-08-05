@@ -15,13 +15,13 @@ app.service('ListenerService', ['$window', '$rootScope', function($window, $root
 
 }]);
 
-app.factory('myModal', function (vModal) {
-  return vModal({
-    controller: 'MyModalController',
-    controllerAs: 'myModalCtrl',
-    templateUrl: 'my-modal.html'
-  });
-});
+// app.factory('myModal', function (vModal) {
+//   return vModal({
+//     controller: 'MyModalController',
+//     controllerAs: 'myModalCtrl',
+//     templateUrl: 'my-modal.html'
+//   });
+// });
 
 app.controller('TrayController', ['ListenerService', '$scope', '$rootScope', '$timeout', function(ListenerService, $scope, $rootScope, $timeout) {
   $scope.hide = false;
@@ -52,7 +52,7 @@ app.controller('scroll', ['ListenerService', '$scope', '$rootScope', '$timeout',
   $timeout(function() {
     $scope.scrollTick = true;
   }, 5000);
-  
+
   $rootScope.$on('DOM.scroll', function() {
     $('.scroll-notify').css({'opacity':( 100-$(window).scrollTop()/2 )/100});
   });

@@ -34,7 +34,9 @@ router.get('/all', function(req, res) {
 
     query.on('row', row => {result.push(row)});
 
-    query.on('err', err => {throw(err)});
+    query.on('err', err => {
+      throw(err);
+    });
 
     query.on('end', function() {
       res.send(result);
@@ -49,7 +51,9 @@ router.post('/new', function(req, res) {
 
     var query = client.query(`INSERT INTO posts (date_added, title, body) VALUES ($1, $2, $3)`, [new Date(), req.body.title, req.body.body]);
 
-    query.on('err', err => {throw(err)});
+    query.on('err', err => {
+      throw(err);
+    });
 
     query.on('end', function() {
       res.sendStatus(200);

@@ -41,6 +41,7 @@ router.get('/:article', function(request, res) {
           res.render('blog.jade', {title: 'Kyle Johnson\'s Blog #' + request.params.article,
                                   header: result.title,
                                   postBody: result.body,
+                                  postDate: result.date_added,
                                   range: range,
                                   current: parseInt(request.params.article)});
         }

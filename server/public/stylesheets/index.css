@@ -98,16 +98,20 @@ h5 {
   transform: translateY(0); }
 
 .fa-github:hover {
-  text-shadow: 1px 0 20px #C97EEF; }
+  text-shadow: 1px 0 20px #C97EEF;
+  color: white; }
 
 .fa-stack-overflow:hover {
-  text-shadow: 1px 0 20px #F47F23; }
+  text-shadow: 1px 0 20px #F47F23;
+  color: white; }
 
 .fa-linkedin-square:hover {
-  text-shadow: 1px 0 20px #006699; }
+  text-shadow: 1px 0 20px #006699;
+  color: white; }
 
 .fa-envelope:hover {
-  text-shadow: 1px 0 20px cyan; }
+  text-shadow: 1px 0 20px cyan;
+  color: white; }
 
 .banner {
   background: url("../images/blue-blur.jpg") no-repeat fixed center;

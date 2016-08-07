@@ -53,15 +53,19 @@
 
 .fa-github:hover {
   text-shadow: $hover-shadow $github;
+  color: white;
 }
 .fa-stack-overflow:hover {
   text-shadow: $hover-shadow $stackoverflow;
+  color: white;
 }
 .fa-linkedin-square:hover {
   text-shadow: $hover-shadow $linkedin;
+  color: white;
 }
 .fa-envelope:hover {
   text-shadow: $hover-shadow cyan;
+  color: white;
 }
 
 .banner {

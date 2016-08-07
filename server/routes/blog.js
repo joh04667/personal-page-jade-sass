@@ -43,7 +43,7 @@ router.get('/:article', function(request, res) {
                                   postBody: result.body,
                                   postDate: result.date_added,
                                   range: range,
-                                  current: parseInt(request.params.article)});
+                                  current: request.params.article});
         }
     });
     });

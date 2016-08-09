@@ -14,7 +14,6 @@ passport.use('local', new localStrategy({passReqToCallback: true, usernameField:
 
             query.on('row', function(row) {
               user = row;
-
             });
 
             // close connection after data get
@@ -37,6 +36,8 @@ passport.use('local', new localStrategy({passReqToCallback: true, usernameField:
 
 
   })); // end strategy def
+
+
 
 
 module.exports = name;

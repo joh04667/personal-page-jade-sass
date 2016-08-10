@@ -5,6 +5,15 @@ var pg = require('pg');
 var connectionString = require('../db/connection').connectionString;
 
 
+function prettyDate(date) {
+  var result = {
+    month: date.getMonth() % 11 + 1,
+    day: date.getDate(),
+    year: date.getFullYear(),
+  };
+  return result;
+}
+
 router.get('/', function(req, res) {
   var result = [];
 

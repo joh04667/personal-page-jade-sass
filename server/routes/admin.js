@@ -6,12 +6,12 @@ var connectionString = require('../db/connection').connectionString;
 
 
 function prettyDate(date) {
-  var result = {
-    month: date.getMonth() % 11 + 1,
-    day: date.getDate(),
-    year: date.getFullYear(),
-  };
-  return result;
+  var result = [
+    date.getMonth() % 11 + 1,
+    date.getDate(),
+    date.getFullYear(),
+  ];
+  return result.join('-');
 }
 
 router.get('/', function(req, res) {
@@ -27,7 +27,8 @@ router.get('/', function(req, res) {
       console.log(result);
       done();
       res.render('admin.jade', {title: 'Turn around',
-                                posts: result});
+                                posts: result,
+                                prettyDate: prettyDate});
     });
   });
 

@@ -15,8 +15,7 @@ html(ng-app='MyAdmin')
         each post in posts
           li
             h5 #{post.title}
-              - var prettyDate = (post.date_added.getMonth() % 11 + 1) + '-' + post.date_added.getDate() + '-' + post.date_added.getFullYear();
-              span= prettyDate
+              span= prettyDate(post.date_added)
             p= post.body
       div.newPost
         div.post-write(ng-controller="NewPostController")

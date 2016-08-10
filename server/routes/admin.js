@@ -3,16 +3,7 @@ var path = require('path');
 var jade = require('jade');
 var pg = require('pg');
 var connectionString = require('../db/connection').connectionString;
-
-
-function prettyDate(date) {
-  var result = [
-    date.getMonth() % 11 + 1,
-    date.getDate(),
-    date.getFullYear(),
-  ];
-  return result.join('-');
-}
+var util = require('../../modules/util');
 
 router.get('/', function(req, res) {
   var result = [];
@@ -27,7 +18,7 @@ router.get('/', function(req, res) {
       done();
       res.render('admin.jade', {title: 'Turn around',
                                 posts: result,
-                                prettyDate: prettyDate});
+                                prettyDate: util.prettyDate});
     });
   });
 

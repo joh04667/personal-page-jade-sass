@@ -3,6 +3,7 @@ var path = require('path');
 var jade = require('jade');
 var pg = require('pg');
 var connectionString = require('../db/connection.js').connectionString;
+var util = require('../../modules/util');
 
 
 router.get('/', function(request, res) {
@@ -43,6 +44,7 @@ router.get('/:article', function(request, res) {
                                   postBody: result.body,
                                   postDate: result.date_added,
                                   range: range,
+                                  prettyDate: util.prettyDate,
                                   current: request.params.article * 1});
         }
     });

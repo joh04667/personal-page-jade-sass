@@ -17,7 +17,7 @@ html(ng-app='BlogPost')
         div.post
           h3= header
           p Posted on 
-            span= postDate
+            span= prettyDate(postDate)
           p!= postBody
         div.post-nav
           ul

@@ -86,7 +86,7 @@ li:nth-child(even) {
 h5 {
   padding: 5px; }
   h5 span {
-    font-size: .5em; }
+    font-size: .75em; }
   h5 button, h5 a {
     float: right; }
 

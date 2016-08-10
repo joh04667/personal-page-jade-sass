@@ -19,12 +19,11 @@ router.get('/', function(req, res) {
 
   pg.connect(connectionString, function(err, client, done) {
 
-    var query = client.query(`SELECT * FROM posts`);
+    var query = client.query(`SELECT * FROM posts ORDER BY id DESC`);
 
     query.on('row', row => {result.push(row)});
     query.on('err', err => {throw(err)});
     query.on('end', function() {
-      console.log(result);
       done();
       res.render('admin.jade', {title: 'Turn around',
                                 posts: result,

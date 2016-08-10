@@ -22,6 +22,10 @@ app.factory('DataService', ['$http', function($http) {
 
 app.controller('PostListController', ['DataService', '$scope', function(DataService, $scope) {
 
+  $scope.edit = function(stuff) {
+    console.log(stuff);
+  };
+
 }]);
 
 app.controller('NewPostController', ['DataService', '$scope', '$http', function(DataService, $scope, $http) {

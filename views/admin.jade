@@ -14,9 +14,9 @@ html(ng-app='MyAdmin')
         ol
         each post in posts
           li
-            h5 #{post.title}
+            h5 #{post.title} 
               span= prettyDate(post.date_added)
-            p= post.body
+              button(ng-click="edit(#{post.id})") Edit
       div.newPost
         div.post-write(ng-controller="NewPostController")
           form

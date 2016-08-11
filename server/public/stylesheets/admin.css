@@ -62,10 +62,15 @@ pre {
   color: #E0E0E0;
   margin: 0 15px; }
 
+ol {
+  margin: 0; }
+
 .post-list {
   margin: auto 30px;
   background-color: #E0E0E0;
-  color: #363636; }
+  color: #363636;
+  max-height: 250px;
+  overflow: scroll; }
 
 form {
   margin: 50px; }

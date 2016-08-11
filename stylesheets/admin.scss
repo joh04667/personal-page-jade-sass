@@ -12,10 +12,16 @@ pre {
   margin: 0 15px;
 }
 
+ol {
+  margin: 0;
+}
+
 .post-list {
   margin: auto 30px;
   background-color: $white;
   color: $black;
+  max-height: 250px;
+  overflow: scroll;
 }
 
 form {

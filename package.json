@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "dependencies": {
-    "angular": "^1.5.5",
+    "angular": "^1.5.8",
     "angular-animate": "^1.5.7",
     "angular-masonry": "^0.16.0",
     "angular-route": "^1.5.5",
@@ -16,6 +16,7 @@
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "jquery": "^3.0.0",
+    "material": "^0.1.1",
     "ngsticky": "^1.7.12",
     "node-sass": "^3.8.0",
     "nodemon": "^1.9.1",

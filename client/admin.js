@@ -1,4 +1,4 @@
-var app = angular.module('MyAdmin', ['angularTrix']);
+var app = angular.module('MyAdmin', ['angularTrix', 'ngAria', 'ngAnimate', 'ngMaterial']);
 
 app.factory('DataService', ['$http', function($http) {
 

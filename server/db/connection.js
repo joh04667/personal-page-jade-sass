@@ -1,5 +1,8 @@
 var pg = require('pg');
 
+pg.defaults.password = '';
+console.log('host',pg.defaults);
+pg.defaults.host = "/var/run/postgresql";
 var connectionString;
 
 if (process.env.DATABASE_URL){
@@ -14,6 +17,7 @@ if (process.env.DATABASE_URL){
 function initializeDB() {
   pg.connect(connectionString, function(err, client, done) {
     console.log('connected to postajsdnfowenfwql');
+
     if(err) {
       throw(err);
     }

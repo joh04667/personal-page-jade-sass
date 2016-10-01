@@ -2,7 +2,6 @@ var pg = require('pg');
 
 pg.defaults.password = '';
 console.log('host',pg.defaults);
-pg.defaults.host = "/var/run/postgresql";
 var connectionString;
 
 if (process.env.DATABASE_URL){
@@ -11,6 +10,8 @@ if (process.env.DATABASE_URL){
   connectionString = process.env.DATABASE_URL;
 } else {
   console.log('local var');
+  pg.defaults.user = 'postgres';
+  pg.defaults.password = 'postgres';
   connectionString = "postgres://localhost:5432/portfolio";
 }
 

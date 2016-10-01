@@ -23,7 +23,7 @@ app.service('ListenerService', ['$window', '$rootScope', function($window, $root
 //   });
 // });
 
-app.controller('TrayController', ['ListenerService', '$scope', '$rootScope', '$timeout', function(ListenerService, $scope, $rootScope, $timeout) {
+app.controller('TrayController', ['ListenerService', '$scope', '$rootScope', '$timeout', '$http', function(ListenerService, $scope, $rootScope, $timeout, $http) {
   $scope.hide = false;
   ListenerService.scrollDown();
 
@@ -41,6 +41,14 @@ app.controller('TrayController', ['ListenerService', '$scope', '$rootScope', '$t
       scrollListen();
     }
   });
+
+  function blah() {
+  $http.get('/test').then(function(res) {
+    console.log('res', res)
+  })
+}
+
+blah();
 
 
 }]);

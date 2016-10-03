@@ -54,5 +54,7 @@ router.get('/:article', function(request, res) {
 
 
 });
-
+function commit(){
+  var nothing = 'NADA';
+}
 module.exports = router;

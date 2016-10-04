@@ -8,11 +8,7 @@ var util = require('../../modules/util');
 
 router.get('/', function(request, res) {
      res.redirect('/blog/1')
-  // res.render('blog.jade', {
-  //                           title: `Kyle Johnson's Blog`,
-  //                           range: [2,3,4,5],
-  //                           util: util
-  //                         });
+     // TODO: Make blog splash page or redirect to archive
 });
 
 

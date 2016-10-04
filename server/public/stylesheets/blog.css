@@ -137,4 +137,10 @@ header {
   .post-nav span {
     color: #363636; }
 
+li.disabled {
+  text-decoration: none;
+  color: #363636; }
+  li.disabled:hover {
+    text-decoration: none; }
+
 /*# sourceMappingURL=blog.css.map */

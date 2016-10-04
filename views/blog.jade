@@ -29,8 +29,11 @@ html(ng-app='BlogPost')
             //else
               //p.disabled &#9668 Prev
             each num, index in range
-              a(href="/blog/#{num}")
-                li= num
+              unless num == article_id
+                a(href="/blog/#{num}")
+                  li= num
+              else
+                li.disabled= num
               if index !== range.length - 1
                 span /
             - var lastPage = range[range.length - 1] == article_id

@@ -12,7 +12,7 @@ var util = {
 
   // Make an HTML snippet usable with Prettify's code syntax highlighting.
   addPrettyClass: function(post) {
-    // Uses Cheerio to load the body html. Cheerio exposes jQuery methods to interact with it like it was on the DOM. 
+    // Uses Cheerio to load the body html. Cheerio exposes jQuery methods to interact with it like it was on the DOM.
     var $ = require('cheerio').load(post);
     $('pre').addClass('prettyprint');
     return $.html();

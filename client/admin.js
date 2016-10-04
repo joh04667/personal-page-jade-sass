@@ -35,6 +35,7 @@ app.controller('NewPostController', ['DataService', '$scope', '$http', function(
   }
 
   $scope.submit = function() {
+
     if($scope.title && $scope.body) {
       $http.post('/admin/new', {title: $scope.title, body: $scope.body}).then(function(response){
         DataService.GetPosts();

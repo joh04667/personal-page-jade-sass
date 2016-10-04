@@ -4,6 +4,7 @@ html(ng-app='BlogPost')
     title= title
     link(rel='stylesheet', href='/stylesheets/blog.css')
     script(src='/vendor/angular/angular.min.js')
+    script(src='https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js')
     script(src='/assets/scripts/blog.js')
     body
       header
@@ -35,3 +36,4 @@ html(ng-app='BlogPost')
             - var lastPage = range[range.length - 1] == article_id
             unless lastPage
               a(href="/blog/#{next}") &#9658 Next
+            script window.codify();

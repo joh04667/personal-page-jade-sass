@@ -18,16 +18,20 @@ html(ng-app='BlogPost')
           h3= header
           p Posted on 
             span= util.prettyDate(postDate)
-            span= console.log(util)
           p!= postBody
         div.post-nav
           ul
             - var prev = current - 1
             - var next = current + 1
-            a(href="/blog/#{prev}") &#9668 Prev
+            if prev
+              a(href="/blog/#{prev}") &#9668 Prev
+            //else
+              //p.disabled &#9668 Prev
             each num, index in range
               a(href="/blog/#{num}")
                 li= num
               if index !== range.length - 1
                 span /
-            a(href="/blog/#{next}") &#9658 Next
+            - var lastPage = range[range.length - 1] == article_id
+            unless lastPage
+              a(href="/blog/#{next}") &#9658 Next

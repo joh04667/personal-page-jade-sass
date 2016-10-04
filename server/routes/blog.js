@@ -39,6 +39,8 @@ router.get('/:article', function(request, res) {
         if(!result) {
           res.sendStatus(404);
         } else {
+          console.log(result.date_added)
+          console.log(util.prettyDate(result.date_added));
           res.render('blog.jade', {title: `Kyle Johnson\'s Blog #` + request.params.article,
                                   article_id: request.params.article,
                                   header: result.title,

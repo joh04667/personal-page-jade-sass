@@ -7,7 +7,12 @@ var util = require('../../modules/util');
 
 
 router.get('/', function(request, res) {
-  res.render('blog.jade', {title: `Kyle Johnson's Blog`, range: [2,3,4,5]});
+     res.redirect('/blog/1')
+  // res.render('blog.jade', {
+  //                           title: `Kyle Johnson's Blog`,
+  //                           range: [2,3,4,5],
+  //                           util: util
+  //                         });
 });
 
 
@@ -30,6 +35,7 @@ router.get('/:article', function(request, res) {
 
       query.on('row', row => {range.push(row.id)});
       query.on('end', function() {
+
         client.end();
 
         // get just first result for post id. if no result, set false. Sort it numerically
@@ -39,8 +45,7 @@ router.get('/:article', function(request, res) {
         if(!result) {
           res.sendStatus(404);
         } else {
-          console.log(result.date_added)
-          console.log(util.prettyDate(result.date_added));
+
           res.render('blog.jade', {title: `Kyle Johnson\'s Blog #` + request.params.article,
                                   article_id: request.params.article,
                                   header: result.title,
@@ -57,7 +62,5 @@ router.get('/:article', function(request, res) {
 
 
 });
-function commit(){
-  var nothing = 'NADA';
-}
+
 module.exports = router;

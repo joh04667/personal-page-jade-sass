@@ -34,7 +34,7 @@ router.get('/:article', function(request, res) {
 
         // get just first result for post id. if no result, set false. Sort it numerically
         result = result.length ? result[0] : false;
-        range = range.sort();
+        range = range.sort((a,b) => a - b);
         // if no result found, 404 them.
         if(!result) {
           res.sendStatus(404);

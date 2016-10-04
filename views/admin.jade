@@ -18,7 +18,7 @@ html(ng-app='MyAdmin')
         ol
         each post in posts
           li
-              p= prettyDate(post.date_added)
+              p= util.prettyDate(post.date_added)
               h5 #{post.title}
               button(ng-click="edit(#{post.id})") Edit
               a(href='/blog/#{post.id}') View

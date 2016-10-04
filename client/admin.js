@@ -6,7 +6,6 @@ app.factory('DataService', ['$http', function($http) {
   var GetPosts = function() {
     $http.get('/admin/all').then(function(response) {
       result.data = response.data;
-      console.log(response);
     });
   };
 

@@ -22,8 +22,8 @@ html(ng-app='BlogPost')
           p!= postBody
         div.post-nav
           ul
-            - var prev = current - 1
-            - var next = current + 1
+            - var prev = article_id - 1
+            - var next = article_id + 1
             if prev
               a(href="/blog/#{prev}") &#9668 Prev
             //else

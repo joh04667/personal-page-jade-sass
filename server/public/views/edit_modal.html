@@ -1,8 +1,10 @@
 <v-modal class="vModal--default" onclose="close()">
-  <v-dialog heading="My modal" small middle>
+  <v-dialog heading="My modal" large middle>
     <v-close label="Close"></v-close>
 
-    <h1>My modal</h1>
+    <h1>Edit {{modalData}}</h1>
+
+    <p>{{modalData.body}}</p>
 
     <button ng-click="close()">OK</button>
   </v-dialog>

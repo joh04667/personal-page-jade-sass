@@ -11,7 +11,17 @@ app.factory('DataService', ['$http', function($http) {
 
     GetPosts();
 
+    var modalData = {};
+    var modalShare = function(postId) {
+      var post = result.data.find(function(s) {
+        return s.id === postId;
+      });
+      modalData = postId === undefined ? {} : post;
+    }
+
     return {
+        modalShare: modalShare,
+        modalData: modalData,
         result: result,
         GetPosts: GetPosts
     };
@@ -26,13 +36,20 @@ app.factory('MyModal', ['vModal', function(vModal) {
 }]);
 
 app.controller('ModalController', ['MyModal', 'DataService', '$scope', function(MyModal, DataService, $scope) {
-    $scope.close = MyModal.deactivate;
-
+    $scope.close = function() {
+      MyModal.deactivate();
+      DataService.modalShare();
+    }
+    $scope.postData = DataService.modalData;
 }]);
 
 
 app.controller('PostListController', ['DataService', '$scope', 'MyModal', function(DataService, $scope, MyModal) {
-    $scope.edit = MyModal.activate;
+    $scope.edit = function(post) {
+      MyModal.activate();
+      DataService.modalShare(post);
+    }
+    $scope.modalData = DataService.modalData;
 
 }]);
 

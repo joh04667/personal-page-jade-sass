@@ -30,9 +30,10 @@
 
 ##### index.jade:
 
+* ~~Currently you can scroll sideways for the slide-up menu. Fix it.~~
+
 * Include link to blog
 
-* Currently you can scroll sideways for the slide-up menu. Fix it.
 
 
 #### Server:

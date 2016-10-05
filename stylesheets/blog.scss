@@ -1,6 +1,12 @@
 @import "style";
 @import "shutter-out";
 
+pre::-webkit-scrollbar {
+    width: 0px;  /* remove scrollbar space */
+    background: transparent;  /* optional: just make scrollbar invisible */
+}
+
+
 
 body {
   background-color: $blue;
@@ -11,6 +17,7 @@ body {
   background-color: $white;
   font-size: 3em;
   margin: auto 25px;
+  border-radius: 15px;
 }
 
 

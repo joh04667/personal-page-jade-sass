@@ -30,7 +30,7 @@ html(ng-app='MyAdmin')
             md-input-container
               label Title
               input(type="text", ng-model="title", required)
-            trix-editor(angular-trix, ng-model='body', style="min-height: 250px")
+            trix-editor(angular-trix, ng-model='body', style="min-height: 250px" trix-attachment-add="trixAttachment(e, editor)")
             input(type='submit', ng-click='submit()')
 
          

@@ -36,7 +36,10 @@ h5 {
 pre {
   background-color: #363636;
   color: #E0E0E0;
-  margin: 5px 20px; }
+  margin: 5px 20px;
+  border-left: 2px inset black !important;
+  border-right: 2px inset black !important;
+  overflow-x: auto; }
 
 p {
   font-size: 2em; }
@@ -104,6 +107,12 @@ p {
   -webkit-transform: scaleX(1);
   transform: scaleX(1); }
 
+pre::-webkit-scrollbar {
+  width: 0px;
+  /* remove scrollbar space */
+  background: transparent;
+  /* optional: just make scrollbar invisible */ }
+
 body {
   background-color: #005163;
   margin-top: 70px; }
@@ -111,7 +120,8 @@ body {
 .post {
   background-color: #E0E0E0;
   font-size: 3em;
-  margin: auto 25px; }
+  margin: auto 25px;
+  border-radius: 15px; }
 
 header {
   position: absolute;

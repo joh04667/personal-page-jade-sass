@@ -35,6 +35,8 @@ app.factory('MyModal', ['vModal', function(vModal) {
     })
 }]);
 
+
+
 app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', '$window', function(MyModal, DataService, $http, $scope, $window) {
     $scope.close = function() {
       MyModal.deactivate();
@@ -49,10 +51,12 @@ app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', 
       $scope.modalTitle = DataService.modalData.data.title;
     }
 
+
+
     $scope.submit = function() {
 
       if($scope.modalTitle && $scope.modalBody) {
-        
+
         $http.put('/admin/edit/' + DataService.modalData.data.id, {
           title: $scope.modalTitle,
           body: $scope.modalBody
@@ -84,6 +88,17 @@ app.controller('NewPostController', ['DataService', '$scope', '$http', '$window'
         $scope.title = '';
         $scope.body = '';
     }
+
+
+
+    createStorageKey = function(file) {
+      var date, day, time;
+      date = new Date();
+      day = date.toISOString().slice(0, 10);
+      time = date.getTime();
+      return "tmp/" + day + "/" + time + "-" + file.name;
+    };
+
 
     $scope.submit = function() {
 

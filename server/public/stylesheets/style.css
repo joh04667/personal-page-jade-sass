@@ -36,7 +36,10 @@ h5 {
 pre {
   background-color: #363636;
   color: #E0E0E0;
-  margin: 5px 20px; }
+  margin: 5px 20px;
+  border-left: 2px inset black !important;
+  border-right: 2px inset black !important;
+  overflow-x: auto; }
 
 p {
   font-size: 2em; }

@@ -29,7 +29,10 @@ router.get('/all', function(req, res) {
 });
 
 
-
+router.post('/upload', function(req, res) {
+  console.log(req);
+  console.log('files', req.files);
+})
 
 
 router.post('/new', function(req, res) {

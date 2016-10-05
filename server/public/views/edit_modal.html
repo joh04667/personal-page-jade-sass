@@ -4,7 +4,7 @@
 
     <h2>Edit {{modalData.title}}</h2>
 
-    <h5>{{modalData.body}}</h5>
+    <trix-editor angular-trix trix-initialize='trixInitialize(e, editor);' ng-model='modalBody'></trix-editor>
 
     <button ng-click="close()">OK</button>
   </v-dialog>

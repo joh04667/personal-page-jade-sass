@@ -41,6 +41,10 @@ app.controller('ModalController', ['MyModal', 'DataService', '$scope', function(
       DataService.modalShare();
     }
     $scope.modalData = DataService.modalData.data;
+    $scope.trixInitialize = function(e, editor) {
+      editor.setSelectedRange([0, 0])
+      editor.insertHTML($scope.modalData.body)
+    }
 }]);
 
 

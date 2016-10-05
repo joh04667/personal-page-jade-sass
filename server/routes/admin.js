@@ -11,10 +11,10 @@ router.get('/', function(req, res) {
 
     db.select('SELECT * FROM posts ORDER BY id DESC', function(result) {
       res.render('admin.jade', {
-                              title: 'Turn around',
-                              posts: result,
-                              util: util
-                              });
+                                title: 'Turn around',
+                                posts: result,
+                                util: util
+                               });
     });
 
 });

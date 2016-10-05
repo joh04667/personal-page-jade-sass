@@ -36,6 +36,9 @@ pre {
   margin: 5px 20px;
   white-space: normal; }
 
+p {
+  font-size: 2em; }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;

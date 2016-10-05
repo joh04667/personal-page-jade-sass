@@ -8,7 +8,7 @@
 
 * Admin modal should not be escapable by clicking outside the modal dialog
 
-
+* Add encryption and login to access admin page.
 
 
 
@@ -35,4 +35,4 @@
 
 * Change router to route from `index.js` instead of `server.js`
 
-* Server crashes when there is a database error. Add try/catch blocks so this doesn't nuke everything.
+* Server crashes when there is a database error. Add try/catch blocks so this doesn't nuke everything, and complete error handling on client side (halfway set up already)

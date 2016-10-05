@@ -36,6 +36,9 @@ pre {
   margin: 5px 20px;
   white-space: normal; }
 
+p {
+  font-size: 2em; }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -105,7 +108,8 @@ body {
 
 .post {
   background-color: #E0E0E0;
-  font-size: 3em; }
+  font-size: 3em;
+  margin: auto 25px; }
 
 header {
   position: absolute;

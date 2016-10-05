@@ -42,7 +42,7 @@ app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', 
     }
     $scope.modalData = DataService.modalData.data;
 
-
+// when editor is initialized in modal, insert selected posts' data in body and title
     $scope.trixInitialize = function(e, editor) {
       editor.setSelectedRange([0, 0])
       editor.insertHTML($scope.modalData.body)
@@ -50,7 +50,9 @@ app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', 
     }
 
     $scope.submit = function() {
+
       if($scope.modalTitle && $scope.modalBody) {
+        
         $http.put('/admin/edit/' + DataService.modalData.data.id, {
           title: $scope.modalTitle,
           body: $scope.modalBody

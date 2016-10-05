@@ -77,3 +77,9 @@ md-input-container {
   font-size: 3em;
   font-weight: bold;
 }
+
+.newPost {
+  input, label {
+    color: $white;
+  }
+}

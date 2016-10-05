@@ -46,7 +46,7 @@ router.get('/:article', function(request, res) {
       if(!result) {
         res.sendStatus(404);
       } else {
-        res.render('blog.jade', {title: `Kyle Johnson\'s Blog #` + request.params.article,
+        res.render('blog.jade', {title: `Kyle Johnson\'s Blog #${request.params.article}`,
                                 header: result.title,
                                 postBody: result.body,
                                 postDate: result.date_added,

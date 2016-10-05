@@ -8,7 +8,7 @@ var db = require('../../modules/Utilities/db');
 
 
 router.get('/', function(request, res) {
-     res.redirect('/blog/1')
+     res.redirect('/blog/latest')
      // TODO: Make blog splash page or redirect to archive
 });
 

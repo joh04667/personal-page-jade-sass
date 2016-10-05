@@ -1,5 +1,5 @@
 <v-modal class="vModal--default" onclose="close()">
-  <v-dialog heading="Edit Post #{{modalData.id}}" large middle>
+  <v-dialog heading="Edit Post #{{modalData.id}}" large center>
     <!-- <v-close label="Close"></v-close> -->
 
 
@@ -11,6 +11,8 @@
 
     <trix-editor angular-trix trix-initialize='trixInitialize(e, editor);' ng-model='modalBody'></trix-editor>
 
+    <button ng-click="submit()">Submit Edit</button>
     <button ng-click="close()">OK</button>
+
   </v-dialog>
 </v-modal>

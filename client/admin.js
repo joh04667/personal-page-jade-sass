@@ -35,7 +35,7 @@ app.factory('MyModal', ['vModal', function(vModal) {
     })
 }]);
 
-app.controller('ModalController', ['MyModal', 'DataService', '$scope', function(MyModal, DataService, $scope) {
+app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', function(MyModal, DataService, $http, $scope) {
     $scope.close = function() {
       MyModal.deactivate();
       DataService.modalShare();
@@ -47,7 +47,17 @@ app.controller('ModalController', ['MyModal', 'DataService', '$scope', function(
       editor.setSelectedRange([0, 0])
       editor.insertHTML($scope.modalData.body)
       $scope.modalTitle = DataService.modalData.data.title;
-      console.log($scope.modalTitle);
+    }
+
+    $scope.submit = function() {
+      if($scope.modalTitle && $scope.modalBody) {
+        $http.put('/admin/edit/' + DataService.modalData.data.id, {
+          title: $scope.modalTitle,
+          body: $scope.modalBody
+        }).then(function(response) {
+          response.status == 200 ? $scope.close() : alert('Error updating database');
+        });
+      }
     }
 }]);
 

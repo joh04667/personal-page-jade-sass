@@ -44,4 +44,18 @@ router.post('/new', function(req, res) {
 });
 
 
+
+router.put('/edit/:article', function(req, res) {
+
+    var data = [req.body.title, util.addPrettyClass(req.body.body), new Date()];
+
+    var query = `UPDATE possts SET title= $1, body= $2, date_edited= $3 WHERE id= ${req.params.article}`;
+
+    db.insert(query, data, function(err) {
+      res.sendStatus(err ? 400 : 200);
+    });
+
+});
+
+
 module.exports = router;

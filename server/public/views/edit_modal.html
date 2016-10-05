@@ -2,7 +2,12 @@
   <v-dialog heading="My modal" large middle>
     <v-close label="Close"></v-close>
 
-    <h2>Edit {{modalData.title}}</h2>
+    <h2>Edit post #{{modalData.id}}</h2>
+
+    <md-input-container>
+      <label> Title </label>
+      <input type="text" ng-model="modalTitle" required></input>
+    </md-input-container>
 
     <trix-editor angular-trix trix-initialize='trixInitialize(e, editor);' ng-model='modalBody'></trix-editor>
 

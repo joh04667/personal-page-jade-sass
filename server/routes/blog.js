@@ -13,6 +13,17 @@ router.get('/', function(request, res) {
 });
 
 
+
+// redirect to the latest blug post
+router.get('/latest', function(req, res) {
+
+  db.select(`SELECT MAX(id) FROM posts`, function(result) {
+    res.redirect('/blog/' + result[0].max);
+  });
+
+});
+
+
 // GET request for specific blog post
 router.get('/:article', function(request, res) {
 
@@ -46,6 +57,7 @@ router.get('/:article', function(request, res) {
     });
   });
 });
+
 
 
 module.exports = router;

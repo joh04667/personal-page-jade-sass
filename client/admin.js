@@ -35,7 +35,7 @@ app.factory('MyModal', ['vModal', function(vModal) {
     })
 }]);
 
-app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', function(MyModal, DataService, $http, $scope) {
+app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', '$window', function(MyModal, DataService, $http, $scope, $window) {
     $scope.close = function() {
       MyModal.deactivate();
       DataService.modalShare();
@@ -55,7 +55,13 @@ app.controller('ModalController', ['MyModal', 'DataService', '$http', '$scope', 
           title: $scope.modalTitle,
           body: $scope.modalBody
         }).then(function(response) {
-          response.status == 200 ? $scope.close() : alert('Error updating database');
+
+          if(response.status != 200) {
+            alert('Error updating database');
+          } else {
+            $window.location.href = '/blog/' + DataService.modalData.data.id;
+          }
+
         });
       }
     }
@@ -71,7 +77,7 @@ app.controller('PostListController', ['DataService', '$scope', 'MyModal', functi
 
 }]);
 
-app.controller('NewPostController', ['DataService', '$scope', '$http', function(DataService, $scope, $http) {
+app.controller('NewPostController', ['DataService', '$scope', '$http', '$window', function(DataService, $scope, $http, $window) {
     function resetScope() {
         $scope.title = '';
         $scope.body = '';
@@ -85,8 +91,9 @@ app.controller('NewPostController', ['DataService', '$scope', '$http', function(
                 body: $scope.body
             }).then(function(response) {
                 DataService.GetPosts();
+                $window.location.href = '/blog/latest';
             });
-            resetScope();
+
         }
     };
 

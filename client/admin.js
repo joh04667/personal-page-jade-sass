@@ -16,7 +16,7 @@ app.factory('DataService', ['$http', function($http) {
       var post = result.data.find(function(s) {
         return s.id === postId;
       });
-      modalData = postId === undefined ? {} : post;
+      modalData.data = postId === undefined ? {} : post;
     }
 
     return {
@@ -40,7 +40,7 @@ app.controller('ModalController', ['MyModal', 'DataService', '$scope', function(
       MyModal.deactivate();
       DataService.modalShare();
     }
-    $scope.postData = DataService.modalData;
+    $scope.modalData = DataService.modalData.data;
 }]);
 
 
@@ -49,7 +49,7 @@ app.controller('PostListController', ['DataService', '$scope', 'MyModal', functi
       MyModal.activate();
       DataService.modalShare(post);
     }
-    $scope.modalData = DataService.modalData;
+    $scope.modalData = DataService.modalData.data;
 
 }]);
 

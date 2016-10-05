@@ -4,7 +4,11 @@
 
 * ~~Set server route for editing posts~~
 
+* ~~Currently when modal gets too long, the buttons at the bottom are unreachable. fix it (`max-height` on editor?).~~
+
 * Admin modal should not be escapable by clicking outside the modal dialog
+
+
 
 
 
@@ -17,10 +21,14 @@
 
 * Add 'first' and 'last' links to pagination links
 
+* Add 'date edited' field to post
+
 
 ##### index.jade:
 
 * Include link to blog
+
+* Currently you can scroll sideways for the slide-up menu. Fix it.
 
 
 #### Server:

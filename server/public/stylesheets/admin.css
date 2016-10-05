@@ -90,7 +90,14 @@ input {
 trix-editor {
   background-color: #E0E0E0;
   margin: 20px;
-  font-size: 2em; }
+  font-size: 2em;
+  max-height: 80vh;
+  overflow: scroll; }
+
+v-dialog {
+  margin-bottom: 50px; }
+  v-dialog trix-editor {
+    max-height: 70vh; }
 
 li:nth-child(even) {
   background-color: #A9A9A9; }

@@ -39,6 +39,15 @@ trix-editor {
   background-color: $white;
   margin: 20px;
   font-size: 2em;
+  max-height: 80vh;
+  overflow: scroll;
+}
+
+v-dialog {
+  margin-bottom: 50px;
+  trix-editor {
+    max-height: 70vh;
+  }
 }
 
 li {

@@ -50,6 +50,7 @@ router.get('/:article', function(request, res) {
                                 header: result.title,
                                 postBody: result.body,
                                 postDate: result.date_added,
+                                editDate: result.date_edited,
                                 range: range,
                                 util: util,
                                 article_id: request.params.article * 1});

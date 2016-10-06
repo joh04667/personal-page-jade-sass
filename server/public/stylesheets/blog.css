@@ -30,6 +30,9 @@ h2 {
   font-size: 6em;
   font-weight: bold; }
 
+h3 {
+  font-size: 2em; }
+
 h5 {
   font-size: 2.5em; }
 
@@ -102,6 +105,8 @@ p {
 
 .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
   color: #363636; }
+  .hvr-shutter-out-horizontal:hover a, .hvr-shutter-out-horizontal:focus a, .hvr-shutter-out-horizontal:active a {
+    color: #363636; }
 
 .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
   -webkit-transform: scaleX(1);
@@ -114,15 +119,28 @@ pre::-webkit-scrollbar {
   /* optional: just make scrollbar invisible */ }
 
 body {
-  background-color: #005163;
+  background: linear-gradient(to bottom, #005163, rgba(0, 42, 51, 0.2));
   margin-top: 70px; }
+
+.date {
+  font-size: .9em;
+  font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+  color: #777; }
+
+.editDate {
+  font-size: .6em;
+  font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+  color: #555;
+  font-weight: bold; }
 
 .post {
   background-color: #E0E0E0;
   font-size: 3em;
-  margin: auto 25px;
+  margin: auto 10%;
   border-radius: 15px;
   padding: 5%; }
+  .post h3 {
+    padding-bottom: 25px; }
 
 header {
   position: absolute;
@@ -143,7 +161,9 @@ header {
     height: 100%;
     padding: 0 20px; }
     header li a {
-      line-height: 70px; }
+      line-height: 70px;
+      text-decoration: none;
+      color: #E0E0E0; }
 
 .post-nav {
   font-size: 5em; }

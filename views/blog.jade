@@ -10,15 +10,20 @@ html(ng-app='BlogPost')
       header
         ul
           li.hvr-shutter-out-horizontal 
-            a HOME
+            a(href='/') HOME
           li.hvr-shutter-out-horizontal
             a ARCHIVE
-      h1 is my blug
+          li.hvr-shutter-out-horizontal
+            a CONTACT
+      h1 Come Node With Me
       div.post-container
         div.post
-          h3= header
-          p Posted on 
+          p.date Posted on 
             span= util.dateString(postDate)
+          if editDate  
+            p.editDate (EDITED ON 
+              span= util.dateString(editDate).toUpperCase() + ')'
+          h3= header
           p!= postBody
         div.post-nav
           ul

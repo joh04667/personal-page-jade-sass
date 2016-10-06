@@ -90,7 +90,8 @@ app.controller('NewPostController', ['DataService', '$scope', '$http', '$window'
     }
 
 
-
+    // create storage key for images. Might not need as filenames will do for repeated images!
+    // Plunkr example: http://plnkr.co/edit/hSzwlzUmRQoUtZJke2C4?p=preview
     createStorageKey = function(file) {
       var date, day, time;
       date = new Date();

@@ -13,6 +13,7 @@
 * Add encryption and login to access admin page.
 
 * Trix Editor supports picture uploads, but needs to be set up. Implement this
+  - Started file upload in `admin.js`. Gonna need to do more research.
 
 
 

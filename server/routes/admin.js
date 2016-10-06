@@ -28,7 +28,7 @@ router.get('/all', function(req, res) {
 
 });
 
-
+//TODO: finish implementing upload route
 router.post('/upload', function(req, res) {
   console.log(req);
   console.log('files', req.files);

@@ -10,9 +10,9 @@ var port = process.env.PORT || 3000;
 
 ////////////import modules//////////
 var index = require('./routes/index');
-var blog = require('./routes/blog');
-var admin = require('./routes/admin');
-var test = require('./routes/test')
+// var blog = require('./routes/blog');
+// var admin = require('./routes/admin');
+// var test = require('./routes/test')
 
 
 //////////// config /////////////
@@ -29,9 +29,9 @@ var localStrategy = require('passport-local').Strategy; // username and password
 
 ///////////routes/////////////
 app.use('/', index);
-app.use('/blog', blog);
-app.use('/admin', admin);
-app.use('/test', test)
+// app.use('/blog', blog);
+// app.use('/admin', admin);
+// app.use('/test', test)
 
 //////////// strategy /////////////
 // passport.use('local', new localStrategy({passReqToCallback: true, usernameField: 'username'},

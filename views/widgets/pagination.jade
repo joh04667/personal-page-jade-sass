@@ -1,0 +1,35 @@
+div.pagination-wrap  
+  div.pagination
+    ul
+      - var prev = article_id - 1
+      - var next = article_id + 1
+      unless article_id == 1
+        li
+          a.clean-link(href='/blog/1') &#9668 First 
+      else
+        li.disabled
+          a ...
+      if prev
+        li
+          a.clean-link(href="/blog/#{prev}") &#9668
+      else
+        li.disabled
+          a ...
+      each num, index in range
+        unless num == article_id
+          li
+            a.clean-link(href="/blog/#{num}")= num
+        else
+          li.active
+            a= num
+      - var lastPage = range[range.length - 1] == article_id
+      unless lastPage
+        li
+          a.clean-link(href="/blog/#{next}") &#9658
+        li
+          a.clean-link(href='/blog/latest') Last &#9658
+      else
+        li.disabled
+          a ...
+        li.disabled
+          a ...

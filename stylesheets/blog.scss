@@ -11,13 +11,12 @@ pre::-webkit-scrollbar {
 }
 
 
-i {
-  font-family: $code-font-stack;
-}
+
 
 body {
   background: linear-gradient(to bottom, $blue, rgba(0, 42, 51, 0.2));
   margin-top: 70px;
+  min-height: 100vh;
 }
 
 .date {
@@ -55,6 +54,7 @@ header {
   background-color: $black;
   color: $white;
   font-size: 3em;
+  box-shadow: rgba(35,35,50,0.8) 0px 0px 20px -2px;
   ul {
     height: 100%;
     padding: 0;
@@ -128,8 +128,9 @@ header {
 
 li.disabled {
   text-decoration: none;
-  color: $black;
+  opacity: 0;
   &:hover {
     text-decoration: none;
+    border-top: none;
   }
 }

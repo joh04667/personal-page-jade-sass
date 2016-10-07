@@ -25,25 +25,42 @@ html(ng-app='BlogPost')
               span= util.dateString(editDate).toUpperCase() + ')'
           h3= header
           p!= postBody
-          div.pagination
-            ul
-              - var prev = article_id - 1
-              - var next = article_id + 1
-              if prev
-                a(href="/blog/#{prev}") &#9668 Prev
-              //else
-                //p.disabled &#9668 Prev
-              each num, index in range
-                unless num == article_id
-                  a(href="/blog/#{num}")
-                    li= num
+          div.pagination-wrap  
+            div.pagination
+              ul
+                - var prev = article_id - 1
+                - var next = article_id + 1
+                unless article_id == 1
+                  li
+                    a.clean-link(href='/blog/1') First
                 else
-                  li.disabled= num
-                if index !== range.length - 1
-                  span /
-              - var lastPage = range[range.length - 1] == article_id
-              unless lastPage
-                a(href="/blog/#{next}") &#9658 Next
+                  li.disabled
+                    a
+                if prev
+                  li
+                    a.clean-link(href="/blog/#{prev}") &#9668
+                else
+                  li.disabled
+                    a  
+                each num, index in range
+                  unless num == article_id
+                    li
+                      a.clean-link(href="/blog/#{num}")= num
+                  else
+                    li.active
+                      a= num
+                - var lastPage = range[range.length - 1] == article_id
+                unless lastPage
+                  li
+                    a.clean-link(href="/blog/#{next}") &#9658
+                  li
+                    a.clean-link(href='/blog/latest') Last
+                else
+                  li.disabled
+                    a
+                  li.disabled
+                    a
+                
             
             
     

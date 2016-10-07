@@ -1,12 +1,19 @@
 @import "style";
 @import "shutter-out";
 
+
+$cleargrey: rgba(70,78,84,0.5);
+$code-font-stack: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+
 pre::-webkit-scrollbar {
     width: 0px;  /* remove scrollbar space */
     background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 
+i {
+  font-family: $code-font-stack;
+}
 
 body {
   background: linear-gradient(to bottom, $blue, rgba(0, 42, 51, 0.2));
@@ -15,13 +22,13 @@ body {
 
 .date {
   font-size: .9em;
-  font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+  font-family: $code-font-stack;
   color: #777;
 }
 
 .editDate {
   font-size: .6em;
-  font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+  font-family: $code-font-stack;
   color: #555;
   font-weight: bold;
 }
@@ -66,17 +73,56 @@ header {
   }
 }
 
+.pagination-wrap {
+  border-top: 1px solid #c7c7c7;
+  text-align: center;
+  margin: 30px auto -10px;
+  width: 100%;
+  &:before {
+    content: " ";
+    display: table;
+  }
+}
+
+
+
 .pagination {
-  font-size: 5em;
-  li {
-    display: inline-block;
-    color: $white;
-    &:hover {
-      text-decoration: underline;
-    }
+  font-family: $code-font-stack;
+  font-size: .8em;
+  .active a {
+    color: black;
+    border-top: 1px solid rgba(70,78,84,1);
+
   }
   span {
     color: $black;
+  }
+  ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    margin-top: -1px;
+    padding: 0;
+  }
+  li {
+    display: inline-block;
+    // float: left;
+    vertical-align: baseline;
+    margin-right: 4px;
+    a {
+      transition: all .5s;
+      border-top: 1px solid #c7c7c7;
+      color: $cleargrey;
+      padding: 11px 15px;
+      line-height: 19px;
+      display: block;
+      vertical-align: baseline;
+      &:hover {
+        border-top: 1px solid rgba(70,78,84,0.6);
+        color: $black;
+        background-color: rgba(200, 200, 200, .5);
+      }
+    }
   }
 }
 

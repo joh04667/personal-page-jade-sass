@@ -47,6 +47,12 @@ pre {
 p {
   font-size: 2em; }
 
+.clean-link {
+  text-decoration: none; }
+  .clean-link:visited {
+    text-decoration: none;
+    color: inherit; }
+
 @keyframes fadeInUp {
   0% {
     opacity: 0;
@@ -118,18 +124,21 @@ pre::-webkit-scrollbar {
   background: transparent;
   /* optional: just make scrollbar invisible */ }
 
+i {
+  font-family: "Source Code Pro", Menlo, Consolas, Monaco, monospace; }
+
 body {
   background: linear-gradient(to bottom, #005163, rgba(0, 42, 51, 0.2));
   margin-top: 70px; }
 
 .date {
   font-size: .9em;
-  font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+  font-family: "Source Code Pro", Menlo, Consolas, Monaco, monospace;
   color: #777; }
 
 .editDate {
   font-size: .6em;
-  font-family: 'Source Code Pro', Menlo, Consolas, Monaco, monospace;
+  font-family: "Source Code Pro", Menlo, Consolas, Monaco, monospace;
   color: #555;
   font-weight: bold; }
 
@@ -165,15 +174,45 @@ header {
       text-decoration: none;
       color: #E0E0E0; }
 
+.pagination-wrap {
+  border-top: 1px solid #c7c7c7;
+  text-align: center;
+  margin: 30px auto -10px;
+  width: 100%; }
+  .pagination-wrap:before {
+    content: " ";
+    display: table; }
+
 .pagination {
-  font-size: 5em; }
-  .pagination li {
-    display: inline-block;
-    color: #E0E0E0; }
-    .pagination li:hover {
-      text-decoration: underline; }
+  font-family: "Source Code Pro", Menlo, Consolas, Monaco, monospace;
+  font-size: .8em; }
+  .pagination .active a {
+    color: black;
+    border-top: 1px solid #464e54; }
   .pagination span {
     color: #363636; }
+  .pagination ul {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    margin-top: -1px;
+    padding: 0; }
+  .pagination li {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 4px; }
+    .pagination li a {
+      transition: all .5s;
+      border-top: 1px solid #c7c7c7;
+      color: rgba(70, 78, 84, 0.5);
+      padding: 11px 15px;
+      line-height: 19px;
+      display: block;
+      vertical-align: baseline; }
+      .pagination li a:hover {
+        border-top: 1px solid rgba(70, 78, 84, 0.6);
+        color: #363636;
+        background-color: rgba(200, 200, 200, 0.5); }
 
 li.disabled {
   text-decoration: none;

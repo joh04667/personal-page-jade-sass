@@ -84,6 +84,14 @@ p {
   font-size: 2em;
 }
 
+
+.clean-link {
+  text-decoration: none;
+  &:visited {
+    text-decoration: none;
+    color:inherit;
+  }
+}
 @keyframes fadeInUp {
   0% {
     opacity: 0;

@@ -12,7 +12,7 @@ router.get('/', function(request, res) {
      // TODO: Make blog splash page or redirect to archive
 });
 
-
+ 
 
 // redirect to the latest blug post
 router.get('/latest', function(req, res) {

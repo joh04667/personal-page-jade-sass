@@ -23,7 +23,7 @@ html(ng-app='MyAdmin')
               p= util.prettyDate(post.date_added)
               h5 #{post.title}
               button(ng-click="edit(#{post.id})") Edit
-              a(href='/blog/#{post.id}') View
+              a.clean-link(href='/blog/#{post.id}') View
       div.newPost
         div.post-write(ng-controller="NewPostController")
           form

@@ -20,13 +20,15 @@
 
 #### blog.jade:
 
+* ~~Add 'date edited' field to post~~
+
 * Format post container with padding
 
 * Include pagination at top of page as well
 
 * Add 'first' and 'last' links to pagination links
 
-* Add 'date edited' field to post
+
 
 
 ##### index.jade:

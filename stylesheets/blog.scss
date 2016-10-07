@@ -92,7 +92,10 @@ header {
   .active a {
     color: black;
     border-top: 1px solid rgba(70,78,84,1);
-
+    background-color: rgba(170, 170, 170, .75);
+    &:hover {
+      background-color: rgba(170, 170, 170, .75);
+    }
   }
   span {
     color: $black;

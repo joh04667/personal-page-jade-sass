@@ -76,6 +76,9 @@ p {
     transform: translateY(0); }
   100% {
     transform: translateY(0); } }
+body {
+  width: 100vw; }
+
 .menu {
   transform: translateY(-41px);
   transition: transform .75s ease-in;

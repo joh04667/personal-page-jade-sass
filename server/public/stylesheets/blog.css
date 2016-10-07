@@ -187,7 +187,10 @@ header {
   font-size: .8em; }
   .pagination .active a {
     color: black;
-    border-top: 1px solid #464e54; }
+    border-top: 1px solid #464e54;
+    background-color: rgba(170, 170, 170, 0.75); }
+    .pagination .active a:hover {
+      background-color: rgba(170, 170, 170, 0.75); }
   .pagination span {
     color: #363636; }
   .pagination ul {

@@ -33,7 +33,8 @@
 
 ##### index.jade:
 
-* ~~Currently you can scroll sideways for the slide-up menu. Fix it.~~
+* Currently you can scroll sideways for the slide-up menu. Fix it.
+  - The masonry div is causing this. Gonna change that anyway so eh
 
 * Include link to blog
 

@@ -8,7 +8,7 @@
 
 * ~~When a new post is submitted, redirect to new post page on success. Likewise, when post is edited, redirect to that page~~
 
-* Admin modal should not be escapable by clicking outside the modal dialog
+* ~~Admin modal should not be escapable by clicking outside the modal dialog~~
 
 * Add encryption and login to access admin page.
 

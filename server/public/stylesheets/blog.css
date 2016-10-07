@@ -165,14 +165,14 @@ header {
       text-decoration: none;
       color: #E0E0E0; }
 
-.post-nav {
+.pagination {
   font-size: 5em; }
-  .post-nav li {
+  .pagination li {
     display: inline-block;
     color: #E0E0E0; }
-    .post-nav li:hover {
+    .pagination li:hover {
       text-decoration: underline; }
-  .post-nav span {
+  .pagination span {
     color: #363636; }
 
 li.disabled {

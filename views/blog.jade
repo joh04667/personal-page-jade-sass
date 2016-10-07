@@ -25,25 +25,25 @@ html(ng-app='BlogPost')
               span= util.dateString(editDate).toUpperCase() + ')'
           h3= header
           p!= postBody
-        div.post-nav
-          ul
-            - var prev = article_id - 1
-            - var next = article_id + 1
-            if prev
-              a(href="/blog/#{prev}") &#9668 Prev
-            //else
-              //p.disabled &#9668 Prev
-            each num, index in range
-              unless num == article_id
-                a(href="/blog/#{num}")
-                  li= num
-              else
-                li.disabled= num
-              if index !== range.length - 1
-                span /
-            - var lastPage = range[range.length - 1] == article_id
-            unless lastPage
-              a(href="/blog/#{next}") &#9658 Next
+          div.pagination
+            ul
+              - var prev = article_id - 1
+              - var next = article_id + 1
+              if prev
+                a(href="/blog/#{prev}") &#9668 Prev
+              //else
+                //p.disabled &#9668 Prev
+              each num, index in range
+                unless num == article_id
+                  a(href="/blog/#{num}")
+                    li= num
+                else
+                  li.disabled= num
+                if index !== range.length - 1
+                  span /
+              - var lastPage = range[range.length - 1] == article_id
+              unless lastPage
+                a(href="/blog/#{next}") &#9658 Next
             
             
     
